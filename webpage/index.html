@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    
+    <title>Ideal</title>
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="flex">
+                
+                <i><a href="index.html"><img src="./img/icone-principal3.png"/></a></i>
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="#sobremim">SOBRE MIM</a></li>
+                        <li><a href="./img/leandro_s_sampaio.pdf" target="_blank">CURRÍCULO</a></li>
+                        <li><a href="#design">DESING</a></li>
+                        <li><a href="#hab">HABILIDADES</a></li>
+                    </ul>
+                </nav>
+                <div class="btn-contato">
+                    <a href="#rodape"><button>CONTATO</button></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!----------------------------------------- Menu mobile ---------------------------------------------------->
+    
+    <header id="headerMob">
+        <div class="containerMob">
+            <div class="flexMob">
+                
+                <i><a href="index.html"><img src="./img/icone-principal3.png"/></a></i>
+
+                <div class="mobile-menu">
+                    <ul>
+                        <li class="nav-item"><a class="nav-link" href="#sobremim">SOBRE MIM</a></li>
+                        <li class="nav-item"><a class="nav-link" href="./img/leandro_s_sampaio.pdf" target="_blank">CURRÍCULO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#design">DESING</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hab">HABILIDADES</a></li>
+                    </ul>
+                    <div class="btn-contato">
+                        <a href="#rodape"><button>CONTATO</button></a>
+                    </div>
+                </div>
+
+                <div class="mobile-menu-icon button">
+                    <button onclick="menuShow()"><img class="icon" src="./img/iconMenuMobile.png"/></button>
+                </div>
+                
+
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <main>
+
+            <section class="banner">
+            </section>
+        
+
+            <section id="sobremim" class="module content">
+                <div>
+                    <h2 class="format-title">Sobre Mim</h2>
+                    <div class="timeline-sobremim">
+                        <p class="timeline"></p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="module parallax parallax-1">
+                <h1>DESIGN</h1>
+            </section>
+
+            <section id="design" class="module content">
+                <h2 class="format-title">Developher e Design</h2>
+                <div class="developher-programador">
+                    <p class="zoom2">
+                        <img src="./img/programadorDevelopher.png">
+                    </p>
+                    <h2 class="comb_ferr">A combinação das ferramentas mais utilizadas <br> no desenvolvimento front-end.</h2>
+                </div>
+            </section>
+
+            <section class="module parallax parallax-2">
+                <h1>SKILLS</h1>
+            </section>
+
+            <section id="hab" class="module content">
+                <div class="container-p">
+                    <h2 id="servicos" class="format-title">Habilidades</h2>
+                        <div class="container-carrosel">
+                            <div class="carousel">
+                                <ul class="carousel__list">
+                                    <li class="carousel__item" data-pos="-2">1</li>
+                                    <li class="carousel__item" data-pos="-1">2</li>
+                                    <li class="carousel__item" data-pos="0">3</li>
+                                    <li class="carousel__item" data-pos="1">4</li>
+                                    <li class="carousel__item" data-pos="2">5</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="quemAjudamos">
+                    <div class="btn-faca-parte">
+                        <a href="https://github.com/LeandroSampaio7" target="_blank"><button class="btn first">Conhecer!</button></a>
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="module parallax parallax-3">
+                <h1><a>CONTATAR-ME</a></h1>
+            </section>
+
+            <section class="module content" id="rodape">
+                <div class="container-p">
+                    <footer class="footer-bar">
+
+                        <p class="dados_rodape">
+                            <ul class="zoom1">
+                                <li>Instagram</li>
+                                <li><a href="https://www.instagram.com/leandr.ow/" target="_blank"><img src="./img/instagram_footer.png"></img></a></li>
+                            </ul>
+                        </p>
+
+                        <p class="dados_rodape">
+                            <ul class="zoom1">
+                                <li>GitHub</li>
+                                <li><a href="https://github.com/LeandroSampaio7" target="_blank"><img src="./img/github_footer.png"></img></a></li>
+                            </ul>
+                        </p>
+
+                        <p class="dados_rodape">
+                            <ul class="zoom1">
+                                <li>WhatsApp</li>
+                                <li><a href="https://wa.me/5511985570037" target="_blank"><img src="./img/whats_footer.png"></img></a></li>
+                            </ul>
+                        </p>
+
+                        <p class="dados_rodape">
+                            <ul class="zoom1">
+                                <li>Linkedin</li>
+                                <li><a href="linkedin.com/in/leandro-sampaio-66248b230" target="_blank"><img src="./img/linkedin_footer.png"></img></a></li>
+                            </ul>
+                        </p>
+
+                        
+                    </footer>
+                </div>
+            </section>
+            <p class="copyrigh">Copyright © 2024 – Todos os Direitos Reservados.</p>
+        </main>
+        
+    </div>
+    <script type="text/javascript" src="./js/main.js"></script>
+    
+</body>
+</html>
