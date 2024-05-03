@@ -879,7 +879,7 @@ body {
     }
 }
 
-@media (min-width: 376px) and (max-width: 500px){
+@media (min-width: 376px) and (max-width: 700px){
     .banner {
         height: 501px;
         width: 555px;
@@ -887,6 +887,16 @@ body {
         background-repeat: no-repeat;
     }
 }
+
+@media (min-width: 720px) and (max-width: 725px){
+    .banner {
+        height: 963px;
+        width: 720px;
+        background-image: url(../img/capaUmMobile4.png);
+        background-repeat: no-repeat;
+    }
+}
+
 
 
 @media (min-width: 551px) and (max-width: 1070px){
