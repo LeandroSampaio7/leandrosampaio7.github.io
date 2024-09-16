@@ -44,9 +44,23 @@ Aqui estão alguns dos projetos destacados no meu portfólio:
 ![image](https://github.com/user-attachments/assets/0c33ba3f-1e70-4596-8992-67f48938a0f8)
 ![image](https://github.com/user-attachments/assets/0e1f23e2-25d4-4a8b-b06b-d097d6cf7af0)
 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Licença
+Este projeto está licenciado sob a Licença MIT. Consulte o arquivo LICENSE para mais detalhes.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Contato
+----------------------------------------------------------------------------------------------------------------------------------------------------
+Se tiver dúvidas ou precisar de suporte, entre em contato:
 
+Nome: Leandro Silva Sampaio
 
+Telefone (Whatsapp): +55 11 98557-0037
 
+Email: Leandro_sampaio.dasilva1@outlook.com 
+
+LinkedIn: https://www.linkedin.com/in/leandro-sampaio-66248b230/ 
+
+Portifólio web: https://leandrosampaio7.github.io/webpage/index
 
 
