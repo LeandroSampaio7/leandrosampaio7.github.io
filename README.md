@@ -33,11 +33,14 @@ https://leandrosampaio7.github.io/webpage/index
 
 Aqui estão alguns dos projetos destacados no meu portfólio:
 
-1. **[Aluga Simples](https://alugasimples-aqeyasgdccadf4dt.brazilsouth-01.azurewebsites.net)**  
+1. **[Aluga Simples](https://github.com/LeandroSampaio7/AlugalSimples)**  
    Uma plataforma intuitiva e sofisticada para gestão de reservas de espaços.
 
-2. **[Vegas Transportes](https://grupovegas.azurewebsites.net)**  
+2. **[Vegas Transportes](https://github.com/LeandroSampaio7/VegasTransportes)**  
    Aplicação web desenvolvido com o objetivo de melhorar o atendimento ao cliente para uma transportadora.
+
+3. **[Menu Digital](https://github.com/LeandroSampaio7/MenuDigital)**  
+   Trata-se de um aplicativo web cuja principal funcionalidade é exibir produtos em um menu digital.
 
 ## Visualização
 ![image](https://github.com/user-attachments/assets/86741be7-05f8-4363-90a4-8b5e0537689d)
