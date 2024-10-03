@@ -291,7 +291,7 @@ main{
 }
 
 .academics:hover{
-    background: #414141;
+    background: #0a0a0aee;
     cursor: pointer;
 }
 
@@ -599,6 +599,38 @@ main{
     align-items: center;
     justify-content: left;
     cursor: pointer;
+}
+
+.sk {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+    cursor: pointer;
+}
+
+.sk:hover {
+    filter: grayscale(0%);
+    transition: filter 0.3s ease;
+}
+
+.bi-linkedin:hover{
+    color: #0077b7;
+}
+
+.bi-github:hover{
+    color: #5c6bc0;
+}
+
+.bi-instagram:hover{
+    background: linear-gradient(45deg, #ffc201, #fd01bf, #8c0bfa);
+    background-clip: text;
+    -webkit-background-clip: text; /* Para navegadores baseados em WebKit */
+    -webkit-text-fill-color: transparent; /* Para Safari e Chrome */
+    color: transparent; /* Para compatibilidade adicional */
+
+}
+
+.bi-whatsapp:hover{
+    color: #25d366;
 }
 
 
