@@ -484,63 +484,28 @@ function themeColor(theme){
 }
 
 
-(function () {
-const el = document.getElementById('screenSize');
-
-
-function formatSize() {
-const w = window.innerWidth;
-const h = window.innerHeight;
-const dpr = (window.devicePixelRatio || 1).toFixed(2);
-return `⟂ <strong>${w}</strong> × <strong>${h}</strong> px · DPR: <strong>${dpr}</strong>`;
-}
-
-
-// Atualiza imediatamente ao carregar
-function update() {
-el.innerHTML = formatSize();
-}
-
-
-// Debounce para evitar excesso de updates durante o resize
-let rafId = null;
-function onResize() {
-if (rafId) cancelAnimationFrame(rafId);
-rafId = requestAnimationFrame(update);
-}
-
-
-// Eventos relevantes
-window.addEventListener('resize', onResize);
-window.addEventListener('orientationchange', onResize);
-// Alguns navegadores disparam quando muda a escala/DPR
-window.matchMedia && window.matchMedia(`(resolution: ${window.devicePixelRatio}dppx)`).addEventListener?.('change', onResize);
-
-
-update();
-})();
-
-
-
 const container = document.querySelector('.projects-center');
-let isDown = false;
-let startX;
-let scrollLeft;
+let isDragging = false;
+let startX = 0;
+let scrollStart = 0;
+
+const speedFactor = 2; // Ajuste esse valor para controlar a velocidade
 
 container.addEventListener('touchstart', (e) => {
-isDown = true;
-startX = e.touches[0].pageX - container.offsetLeft;
-scrollLeft = container.scrollLeft;
+  isDragging = true;
+  startX = e.touches[0].clientX;
+  scrollStart = container.scrollLeft;
 });
 
 container.addEventListener('touchmove', (e) => {
-if (!isDown) return;
-e.preventDefault(); // Evita o scroll vertical enquanto arrasta horizontalmente
-const x = e.touches[0].pageX - container.offsetLeft;
-const walk = (x - startX); // Distância do movimento
-container.scrollLeft = scrollLeft - walk;
+  if (!isDragging) return;
+  const currentX = e.touches[0].clientX;
+  const deltaX = (currentX - startX) * speedFactor;
+  container.scrollLeft = scrollStart - deltaX;
 });
 
 container.addEventListener('touchend', () => {
-isDown = false;
+  isDragging = false;
 });
+
+
