@@ -464,7 +464,7 @@ function themeColor(theme){
         servicos.style.color = "#eaeaea";
         curriculo.style.color = "#eaeaea";
         projetos.style.color = "#eaeaea";
-        h1_cetificacao.style.color = "#121212";
+        h1_cetificacao.style.color = "#eaeaea";
 
         descExp.forEach(exp => {
             exp.style.fontWeight = "200";
@@ -507,5 +507,6 @@ container.addEventListener('touchmove', (e) => {
 container.addEventListener('touchend', () => {
   isDragging = false;
 });
+
 
 
