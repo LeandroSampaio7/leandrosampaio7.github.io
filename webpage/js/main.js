@@ -519,3 +519,28 @@ window.matchMedia && window.matchMedia(`(resolution: ${window.devicePixelRatio}d
 
 update();
 })();
+
+
+
+const container = document.querySelector('.projects-center');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+container.addEventListener('touchstart', (e) => {
+isDown = true;
+startX = e.touches[0].pageX - container.offsetLeft;
+scrollLeft = container.scrollLeft;
+});
+
+container.addEventListener('touchmove', (e) => {
+if (!isDown) return;
+e.preventDefault(); // Evita o scroll vertical enquanto arrasta horizontalmente
+const x = e.touches[0].pageX - container.offsetLeft;
+const walk = (x - startX); // Distância do movimento
+container.scrollLeft = scrollLeft - walk;
+});
+
+container.addEventListener('touchend', () => {
+isDown = false;
+});
