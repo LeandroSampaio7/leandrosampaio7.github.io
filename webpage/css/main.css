@@ -1077,7 +1077,7 @@ body {
         opacity: 1;
     }
     .modal-desc-exp {
-        height: 500px;
+        height: auto;
         width: 340px;
     }
 
@@ -1357,7 +1357,7 @@ body {
         opacity: 1;
     }
     .modal-desc-exp {
-        height: 500px;
+        height: auto;
         width: 340px;
     }
 
@@ -2455,4 +2455,5 @@ pointer-events: none; /* não interfere com cliques na página */
     .nav-bar-mobile {
         height: 10vh;
     }
+
 }
