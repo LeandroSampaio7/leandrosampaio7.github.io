@@ -6,318 +6,592 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    <link rel="shortcut icon" href="./img/shortcutIcon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/iconL1.jpg" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <title>Leandro Sampaio</title>
 </head>
 <body>
     
-    <!-- HEADER -->
-    <header>
-        <div class="myData">
-            <div class="my-photo">
-                <img src="./img/eu.png" />
-            </div>
-            <div class="my-name">
-                <h1>Leandro S Sampaio</h1>
-            </div>
-            <div class="my-job">
-                <h1>Desenvolvedor .NET Junior</h1>
-            </div>
-            <div class="my-contact">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/leandro-sampaio-66248b230/" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                    <li><a href="https://github.com/LeandroSampaio7" target="_blank"><i class="bi bi-github"></i></a></li>
-                    <li><a href="https://www.instagram.com/leandr.ow/" target="_blank"><i class="bi bi-instagram"></i></a></li>
-                    <li><a href="https://wa.me/5511985570037" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
-                </ul>
+    <!-- NAVBAR MOBILE OPEN-->
+    <div id="id_menu_mobile" class="nav-bar-mobile-open">
+        <div class="nav-bar-mobile-open-right">
+            <div class="nav-bar-mobile-open-right-center">
+
+                <div class="menu-mob-close-theme">
+                    <div class="css-btn-mod-mob">
+                        <div class="btn-mod">
+                            <i class="bi bi-moon-fill" id="iconMoonMob" onclick="updateThemeMob(0)"></i>
+                            <i class="bi bi-brightness-high-fill" id="iconSunMob" onclick="updateThemeMob(1)"></i>
+                        </div>
+                    </div>
+                    <i class="bi bi-x-lg iconCloseMenuMob" onclick="closeMenuMobile();"></i>
+                </div>
+
+                <div class="opMenuMob">
+                    <div class="opMenuMob-bg"><a href="#red_projetos" onclick="closeMenuMobile();">Projetos</a></div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </div>
+
+
+                <div class="opMenuMob">
+                    <div class="opMenuMob-bg"><a href="#red_sobreMim" onclick="closeMenuMobile();">Sobre Mim</a></div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </div>
+
+                <div class="opMenuMob">
+                    <div class="opMenuMob-bg"><a href="#red_servicos" onclick="closeMenuMobile();">Serviços</a></div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </div>
+
+                <div class="opMenuMob">
+                    <div class="opMenuMob-bg"><a href="#red_curriculo" onclick="closeMenuMobile();">Curriculo</a></div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </div>
+
+                <div class="opMenuMob">
+                    <div class="opMenuMob-bg"><a href="#red_contatos" onclick="closeMenuMobile();">Contatos</a></div>
+                    <i class="bi bi-caret-right-fill"></i>
+                </div>
+
             </div>
         </div>
-    </header>
+    </div>
 
-    <!--ABOUT AND SKILLS -->
-    <main>
-        <div class="container" id="aboutAndSkills">
-            <div class="aboutAndSkills">
-                <div class="about">
-                    <h1>Sobre mim</h1>
-                    <h2>Programador Júnior com habilidades em front-end 
-                        (HTML, CSS, JavaScript, jQuery, Ajax, Bootstrap) 
-                        e back-end (.NET MVC, C#, Python). Experiência 
-                        em bancos de dados PL/SQL, criando e otimizando 
-                        consultas e procedimentos. Adaptável a novas tecnologias,
-                        com facilidade de aprendizado e interesse em expandir 
-                        conhecimentos para contribuir efetivamente em projetos
-                        de desenvolvimento.
-                    </h2>
-                </div>
-                <div class="skills">
-                    <div class="ct-skills">
-                        <h1>Conhecimentos</h1>
-                        <ul class="ul-skills">
-                            <li><img src="./img/c_htmlSkill.png" class="sk"></li>
-                            <li><img src="./img/c_cssSkills.png" class="sk"></li>
-                            <li><img src="./img/c_jsSkills.png" class="sk"></li>
-                            <li><img src="./img/c_cSkills.png" class="sk"></li>
-                            <li><img src="./img/c_plsqlSkills.png" class="sk"></li>
-                        </ul>
-                        <ul class="ul-skills">
-                            <li><img src="./img/c_netSkills.png" class="sk"></li>
-                            <li><img src="./img/c_jquerySkills.png" class="sk"></li>
-                            <li><img src="./img/c_bootstrapSkills.png" class="sk"></li>
-                            <li><img src="./img/c_angularSkills.png" class="sk"></li>
-                            <li><img src="./img/c_photoshopSkills.png" class="sk"></li>
-                        </ul>
+     <div id="div-aux-modal">
+        <!-- MODAL DESC EXP -->
+        <!-- <div class="bg-modal-desc-exp">
+            <div class="modal-desc-exp">
+                <div class="modal-desc-exp-center">
+                    <div class="ct-close-modal"><i class="bi bi-x" onclick="hideDetExp();"></i></div>
+                    <div class="ct-modal-desc-cab">
+                        <div>
+                            <h1>Empresa</h1>
+                            <h2>Cargo</h2>
+                        </div>
+                        <img src="">
+                    </div>
+
+                    <div class="ct-temp-enter">
+                        <p>Tempo <i class="bi bi-calendar-event"></i> </p>
+                    </div>
+
+                    <div class="lineDescExp">
+                        <div class="lineDescExp"></div>
+                    </div>
+
+                    <div class="details-function">
+                        <p>Descrição (paragrafo 01)</p>
+                        <p>Descrição (paragrafo 0)</p>
                     </div>
                 </div>
             </div>
+        </div> -->
+     </div>
+
+
+    <!-- BG + NAVBAR -->
+    <section id="red_inicio" class="bg-img">
+
+        <!-- NAVBAR -->
+        <nav class="nav-bar-desktop">
+            <div class="nav-bar-desktop-list">
+                <div class="icon-bar"><img src="./img/iconL.jpg"></div>
+                <div class="menu-list">
+                    <ul>
+                        <li><a href="#red_projetos">Projetos</a></li>
+                        <li><a href="#red_sobreMim">Sobre Mim</a></li>
+                        <li><a href="#red_servicos">Serviços</a></li>
+                        <li><a href="#red_curriculo">Curriculo</a></li>
+                        <li><a href="#red_contatos">Contatos</a></li>
+                    </ul>
+                    <div class="mod-dark-clear">
+                        <div class="btn-mod">
+                            <i class="bi bi-moon-fill" id="iconMoon" onclick="updateTheme(0)"></i>
+                            <i class="bi bi-brightness-high-fill" id="iconSun" onclick="updateTheme(1)"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- NAVBAR MOBILE-->
+        <nav class="nav-bar-mobile">
+            <div class="nav-bar-mobile-list">
+                <div class="img_l_menuMobile"><img src="./img/iconL.jpg"></div>
+                <div class="icon_Menu_menuMobile"><i class="bi bi-list" onclick="openMenuMobile();"></i></div> 
+            </div>
+        </nav>
+
+        <div class="bg-data">
+        <!-- MYDATA -->
+         <div class="my-data">
+            <div class="bg-text">
+                <h1>Leandro</h1>
+                <h1>Sampaio</h1>
+                <h2>Desenvolvedor .NET Full Stack</h2>
+                <a href="./img/leandrossampaio_curriculo.pdf" target="_blank" class="btn-dwd-cv">Baixar CV <i class="bi bi-download" style="font-weight: 900 !important;"></i> </a>
+                <div class="my-networks">
+                    <a href="https://www.linkedin.com/in/leandro-sampaio-66248b230" target="_blank"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://github.com/LeandroSampaio7" target="_blank"><i class="bi bi-github"></i></a>
+                    <a href="https://www.instagram.com/leandr.ow" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+                
+            </div>
+         </div>
+            
+        <!-- MYPHOTO -->
+         <div class="my-photo-bg">
+            <img src="./img/leandro-img.png">
+         </div>
+
         </div>
-    </main>
+
+        <div class="pipe-skills">
+            <div class="pipe-skills-list">
+                <div>C#</div>
+                <div>.NET</div>
+                <div>xUnit</div>
+                <div>Blazor</div>
+                <div>SQL</div>
+                <div>Html</div>
+                <div>Css</div>
+                <div>JavaScript</div>
+                <div>React</div>
+                <div>jQuery</div>
+                <div>Ajax</div>
+                <div>Python</div>
+                <div>Git</div>
+                <div>Figma</div>
+                <div>UI & Ux</div>
+                <div>PhotoShop</div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ABOUT ME -->
+    <section id="red_sobreMim" class="about-me">
+        <div class="about-me-text">
+            <h1>Sobre Mim</h1>
+            <div class="about-me-desc">
+                Programador Júnior com habilidades em front-end (HTML, CSS,
+                JavaScript, jQuery, Ajax, Bootstrap) e back-end (.NET MVC, C#,
+                Python). Experiência em bancos de dados PL/SQL, criando e 
+                otimizando consultas e procedimentos. 
+                <br><br>
+                Adaptável a novas tecnologias, com facilidade de aprendizado e 
+                interesse em expandir conhecimentos para contribuir efetivamente
+                em projetos de desenvolvimento.
+            </div>
+        </div>
+    </section>
 
     <!-- SERVICES -->
-    <main>
-        <div class="container">
-            <div class="services">
-                <div class="ct-services">
-                    <h1 class="title-service">Serviços</h1>
-                    <div class="service-itens">
+     <section id="red_servicos" class="services">
+        <div class="services-center">
+            <h1>Serviços</h1>
+            <div class="box-item-service-list">
 
-                        <div class="iten">
-                            <div class="ct-iten">
-                                <div class="ct-iten-img">
-                                    <img class="img-service" src="./img/development-web.png"/>
-                                </div>
-                                <h2 class="name-service">
-                                    Desenvolvimento .NET C# MVC
-                                </h2>
-                                <h2 class="description-service">
-                                    Desenvolvimento .NET é a criação de aplicativos usando a plataforma 
-                                    Microsoft .NET, que suporta múltiplas linguagens (como C#) e oferece
-                                     um ambiente robusto para web, desktop e mobile.
-                                </h2>
+                <div class="box-item-service">
+                    <div class="box-item-left">
+                        <div class="box-item-icon"><i class="bi bi-laptop"></i></div>
+                        <div class="ct-box-item-text">
+                            <div class="box-item-text">
+                                <p class="box-item-text-title">Desenvolvimento .NET C# MVC</p>
+                                Desenvolvimento .NET é a criação de aplicativos usando a 
+                                plataforma Microsoft .NET, que suporta múltiplas 
+                                linguagens (como C#) e oferece um ambiente robusto 
+                                para web, desktop e mobile.
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="iten">
-                            <div class="ct-iten">
-                                <div class="ct-iten-img">
-                                    <img class="img-service" src="./img/web-service.png"/>
-                                </div>
-                                
-                                <h2 class="name-service">
-                                    Desenvolvimento web (html & Css)
-                                </h2>
-                                <h2 class="description-service">
-                                    Desenvolvimento web envolve a criação de sites e aplicativos
-                                    usando HTML para estrutura, CSS para design e layout, gerando
-                                    páginas interativas e responsivas.
-                                </h2>
-                            </div>
-                        </div>
-
-                        <div class="iten">
-                            <div class="ct-iten">
-                                <div class="ct-iten-img">
-                                    <img class="img-service" src="./img/development-bda.png"/>
-                                </div>
-                                <h2 class="name-service">
-                                    Banco de Dados
-                                </h2>
-                                <h2 class="description-service">
-                                    Desenvolvimento de banco de dados envolve a criação, 
-                                    organização e gerenciamento de dados, garantindo 
-                                    armazenamento eficiente, integridade e acesso 
-                                    rápido às informações.
-                                </h2>
-                            </div>
-                        </div>
+                <div class="box-item-service">
+                    <div class="box-item-right">
                         
-                    
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <!-- EXPERIENCE -->
-    <main>
-        <div class="container">
-            <div class="experience">
-                <div class="ct-experience">
-                    <h1 class="title-experience">Experiência</h1>
-                    <div class="itens-academics">
-                        <div class="academics" onclick="abrirDetalhes('topdown');">
-                            <div class="ct-academics">
-                                <h1>TopDown SISTEMAS</h1>
-                                <h2>Desenvolvedor Junior</h2>
-                                <h3>Responsável pela migração de sistemas escrito em ASP clássico para .NET C#, focado no desenvolvimento de software sob demanda.</h3>
-                                <h3><b>Tecnologias: </b>.Net C#, Banco de Dados (PL Sql), Html, Css e javascript</h3>
-                                <h3><b>1 Ano e 3 Meses (CLT)</b></h3>
+                        <div class="ct-box-item-text jf-contet-end">
+                            <div class="box-item-text text-aling-rigth">
+                                <p class="box-item-text-title">Desenvolvimento web - html & Css</p>
+                                Desenvolvimento web envolve a criação de sites e aplicativos usando 
+                                HTML para estrutura, CSS para design e layout, gerando páginas 
+                                interativas e responsivas.
                             </div>
                         </div>
-                        <div class="academics" onclick="abrirDetalhes('vegas');">
-                            <div class="ct-academics">
-                                <h1>Vegas Transportes</h1>
-                                <h2>Desenvolvedor .Net</h2>
-                                <h3>Desenvolvi e liderei a criação de um sistema personalizado em .NET, focado na melhoria do atendimento ao cliente.</h3>
-                                <h3><b>Techs: </b>.Net C#, Html, Css e javascript, Jqyery, Ajax, JSon, bootStrap, Figma</h3>
-                                <h3><b>7 Meses (Freelancer)</b></h3>
+                        <div class="box-item-icon"><i class="bi bi-brush"></i></div>
+                    </div>
+                </div>
+
+                <div class="box-item-service">
+                    <div class="box-item-left">
+                        <div class="box-item-icon"><i class="bi bi-clipboard-data"></i></div>
+                        <div class="ct-box-item-text">
+                            <div class="box-item-text">
+                                <p class="box-item-text-title">Banco de Dados</p>
+                                Desenvolvimento de banco de dados envolve a criação, organização
+                                e gerenciamento de dados, garantindo armazenamento eficiente, 
+                                integridade e acesso rápido às informações.
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         </div>
+     </section>
 
-        <div class="ct-modal-desc-exp" id="modalDetalhes" onclick="fecharDetalhes();">
-            <div class="modal-desc-exp">
-                <div class="modal-desc-exp-text">
-                    <div class="menu-modal-exp">
-                        <label>Descrição detalhada</label>
-                        <i class="bi bi-x-lg" onclick="fecharDetalhes();" id="iconFecharDetalhes"></i>
+     <!-- EXPERIENCE -->
+     <section id="red_curriculo" class="experience">
+        <div class="experience-center">
+            <h1>Experiência</h1>
+
+            <div class="experience-center_aux">
+
+                <div class="ct-item-experience">
+
+                    <div class="item-experience">
+                        <p class="desc-exp-enter" onclick="showDetExp(2023);">TopSaúde HUB</p>
+                        <p class="desc-exp-carg">Estágiario programador</p>
+                        <p class="desc-exp">Iniciei minha trajetória na TopDown como estagiário, focado na migração de sistemas, principalmente na transição de ASP Clássico para .NET MVC C#.</p>
                     </div>
-                    <div class="text-modal-exp">
-                        <div class="menu-ct-title-cargo">
-                            <div class="ct-title-cargo">
-                                <h1 id="title-exp" ></h1>
-                                <h2 id="cargo-exp" ></h2>
-                            </div>
-                            <div class="ct-title-cargo-img"></div>
+
+                    <div class="divFake"></div>
+
+                    <div class="item-experience">
+                        <p class="desc-exp-enter" onclick="showDetExp(2025);">RedMaxx</p>
+                        <p class="desc-exp-carg">Desenvolvedor Full Stack Jr</p>
+                        <p class="desc-exp">Atuei como programador em um projeto de migração e modernização de sistemas legados.</p>
+                    </div>
+
+                    <div  class="divFake"></div>
+
+                </div>
+
+                <div class="line">
+                    <div class="ball">2023</div>
+                    <div class="ball">2024</div>
+                    <div class="ball">2025</div>
+                    <div class="ball-actual"><label>Atual</label></div>
+                </div>
+
+                <div class="ct-item-experience">
+
+                    <div class="divFake"></div>
+
+                    <div class="item-experience text-aling-rigth lst-item-v">
+                        <p class="desc-exp-enter" onclick="showDetExp(2024);">Vegas Transporte</p>
+                        <p class="desc-exp-carg">Desenvolvedor .Net jr</p>
+                        <p class="desc-exp">Fui inserido em um projeto que demandava o desenvolvimento de interfaces responsivas, automação de processos e manutenção contínua de sistemas</p>
+                    </div>
+
+                    <div  class="divFake"></div>
+
+                    <div class="item-experience text-aling-rigth lst-item-t">
+                        <p class="desc-exp-enter" onclick="showDetExp(0);">Tecban</p>
+                        <p class="desc-exp-carg">Analista de Segurança I</p>
+                        <p class="desc-exp">Atuo no desenvolvimento de aplicações web, desktop e APIs utilizando .NET e C#, além de desenvolver testes unitários com xUnit.</p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <!-- LINE EXPERIENCE MOBILES -->
+            <div class="experience-center_aux_mobile">
+
+                <div class="line">
+                    <div class="ball">2023</div>
+                    <div class="ball">2024</div>
+                    <div class="ball">2025</div>
+                    <div class="ball-actual"><label>Atual</label></div>
+                </div>
+
+                <div>
+                    <div class="ct-item-experience">
+
+                        <div class="item-experience">
+                            <p class="desc-exp-enter" onclick="showDetExp(2023);">TopSaúde HUB</p>
+                            <p class="desc-exp-carg">Estágiario programador</p>
+                            <p class="desc-exp">Iniciei minha trajetória na TopDown como estagiário, focado na migração de sistemas, principalmente na transição de ASP Clássico para .NET MVC C#.</p>
                         </div>
-                        <h3 id="duracao-exp" ></h3>
-                        <h4 id="desc-exp" ></h4>
+
+                        <div class="divFake"></div>
+
+                        <div class="item-experience">
+                            <p class="desc-exp-enter" onclick="showDetExp(2025);">RedMaxx</p>
+                            <p class="desc-exp-carg">Desenvolvedor Full Stack Jr</p>
+                            <p class="desc-exp">Atuei como programador em um projeto de migração e modernização de sistemas legados.</p>
+                        </div>
+
+                        <div  class="divFake"></div>
+
+                    </div>
+
+                    <div class="ct-item-experience">
+
+                        <div class="divFake"></div>
+
+                        <div class="item-experience text-aling-rigth lst-item-v">
+                            <p class="desc-exp-enter" onclick="showDetExp(2024);">Vegas Transporte</p>
+                            <p class="desc-exp-carg">Desenvolvedor .Net jr</p>
+                            <p class="desc-exp">Fui inserido em um projeto que demandava o desenvolvimento de interfaces responsivas, automação de processos e manutenção contínua de sistemas</p>
+                        </div>
+
+                        <div  class="divFake"></div>
+
+                        <div class="item-experience text-aling-rigth lst-item-t">
+                            <p class="desc-exp-enter" onclick="showDetExp(0);">Tecban</p>
+                            <p class="desc-exp-carg">Analista de Segurança I</p>
+                            <p class="desc-exp">Atuo no desenvolvimento de aplicações web, desktop e APIs utilizando .NET e C#, além de desenvolver testes unitários com xUnit.</p>
+                        </div>
+
+
                     </div>
                 </div>
+  
             </div>
+
         </div>
+     </section>
 
-    </main>
+     <!-- PROJECTS -->
+     <section id="red_projetos" class="projects">
+        <div class="projects-text"><h1 id="h1_projetos">Projetos</h1>
+            <div class="projects-center">
 
-    <!-- PORTIFOLIO -->
-    <main>
-        <div class="container">
-            <div class="services">
-                <div class="ct-services">
-                    <h1 class="title-service">Portifólio (Outros Serviços)</h1>
-                    <div class="service-itens">
-
-                        <a href="https://github.com/LeandroSampaio7/VegasTransportes" target="_blank" class="iten">
-                            <div class="ct-iten">
-                                <div class="ct-iten-img">
-                                    <img class="img-portifolio" id="img-portifolio" src="./img/portifolioVegas.png"/>
-                                </div>
-                                <h2 class="name-service-portifolio">
-                                    Sistema de Formulario (API)
-                                </h2>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/LeandroSampaio7/AlugalSimples" target="_blank" class="iten">
-                            <div class="ct-iten">
-                                <div class="ct-iten-img">
-                                    <img class="img-portifolio" id="img-portifolio" src="./img/portifolioAluguel.png"/>
-                                </div>
-                                <h2 class="name-service-portifolio">
-                                    Sistema de Aluguel (.NET)
-                                </h2>
-                            </div>
-                        </a>
-
-                        <a href="https://github.com/LeandroSampaio7/MenuDigital" target="_blank" class="iten">
-                            <div class="ct-iten">
-                                <div class="ct-iten-img">
-                                    <img class="img-portifolio" id="img-portifolio" src="./img/portifolioMenuDigital.png"/>
-                                </div>
-                                <h2 class="name-service-portifolio">
-                                    Menu Digital (Web app)
-                                </h2>
-                            </div>
-                        </a>
+                <div class="projects-item">
+                    <div class="cap-project"><img src="./img/bg-project-menuDigital.jpg" /></div>
+                    <div class="title-project"><p>Menu Digital - Web App</p></div>
+                    <div class="desc-project"><p>O Menu Digital é um aplicativo web desenvolvido em com o propósito de exibir produtos em um menu digital. permitindo gerenciar produtos e categorias / subcategorias através de operações CRUD.</p></div>
+                    <div class="skills-project">
+                        <div class="skills-project-item">.Net</div>
+                        <div class="skills-project-item">C#</div>
+                        <div class="skills-project-item">JavaScript</div>
+                        <div class="skills-project-item">Html</div>
+                        <div class="skills-project-item">Css</div>
+                        <div class="skills-project-item">jQuery</div>
+                        <div class="skills-project-item">aJax</div>
+                        <div class="skills-project-item">Bootstrap</div>
                         
-                    
+                    </div>
+
+                </div>
+
+                <div class="projects-item">
+                    <div class="cap-project"><img src="./img/bg-project-alugaSimples.jpg" /></div>
+                    <div class="title-project"><p>Aluga Simples - Gestão de reservas</p></div>
+                    <div class="desc-project"><p>Fornece um serviço completo de reservas, permitindo que usuários agendem seus espaços favoritos de maneira fácil, enquanto os proprietários têm total controle sobre as reservas via um painel administrativo.</p></div>
+                    <div class="skills-project">
+                        <div class="skills-project-item">.Net</div>
+                        <div class="skills-project-item">C#</div>
+                        <div class="skills-project-item">JavaScript</div>
+                        <div class="skills-project-item">Html</div>
+                        <div class="skills-project-item">Css</div>
+                        <div class="skills-project-item">jQuery</div>
+                        <div class="skills-project-item">Bootstrap</div>
+                    </div>
+
+                </div>
+
+                <div class="projects-item">
+                    <div class="cap-project"><img src="./img/bg-project-vegas.JPG" /></div>
+                    <div class="title-project"><p>Vegas Transportes</p></div>
+                    <div class="desc-project"><p>Formulário inteligente para coleta de informações, integrado com APIs para otimizar e profissionalizar o atendimento ao cliente, garantindo mais eficiência e precisão no processo.</p></div>
+                    <div class="skills-project">
+                        <div class="skills-project-item">.Net</div>
+                        <div class="skills-project-item">C#</div>
+                        <div class="skills-project-item">JavaScript</div>
+                        <div class="skills-project-item">Html</div>
+                        <div class="skills-project-item">Css</div>
+                        <div class="skills-project-item">Bootstrap</div>
+                        <div class="skills-project-item">gZappy Api</div>
+                        <div class="skills-project-item">Python</div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </main>
 
-    <!-- EDUCATION -->
-    <main>
-        <div class="container">
-            <div class="experience">
-                <div class="ct-experience">
-                    <div class="itens-academics">
-                        <div class="ct-itens-academics">
-                            <h1 class="title-experience">Formação</h1>
-                            <div class="academics-education" id="certIcon">
-                                <div class="ct-academics-education">
-                                    <h1>UNICID - Universidade de São Paulo</h1>
-                                    <h2>Ciência da Computação</h2> 
-                                    <h3>Bacharelado 8 semestres</h3>
-                                    <h3>Graduação Completa</h3>
-                                    <h3>2023</h3>
-                                </div>                         
-                            </div>
+                <div class="projects-item">
+                    <div class="cap-project"><img src="./img/bg-project-cadastroAlunos.jpg" /></div>
+                    <div class="title-project"><p>Sistema de Cadastro de Alunos</p></div>
+                    <div class="desc-project"><p> sistema permite a gestão completa de cadastros de alunos, incluindo a criação, listagem, atualização e exclusão de registros, além da atribuição de matérias aos alunos.</p></div>
+                    <div class="skills-project">
+                        <div class="skills-project-item">.Net</div>
+                        <div class="skills-project-item">C#</div>
+                        <div class="skills-project-item">JavaScript</div>
+                        <div class="skills-project-item">Html</div>
+                        <div class="skills-project-item">Css</div>
+                        <div class="skills-project-item">jQuery</div>
+                        <div class="skills-project-item">Bootstrap</div>
+                    </div>
+                </div>
+
+                <div class="projects-item">
+                    <div class="cap-project"><img src="./img/bg-project-emBreve.jpg" /></div>
+                    <div class="title-project"><p>Robo para envio de mensagens</p></div>
+                    <div class="desc-project"><p>Este robô automatiza o envio de mensagens no WhatsApp, permitindo disparos em massa de forma rápida e eficiente. Ideal para campanhas, notificações ou comunicação em larga escala, tudo com apenas alguns cliques.</p></div>
+                    <div class="skills-project">
+                        <div class="skills-project-item">Python</div>
+                        <div class="skills-project-item">pyAutoGui</div>
+                        <div class="skills-project-item">ChromeDeveloper</div>
+                        <div class="skills-project-item">Pycharm</div>
+                        <div class="skills-project-item">Miro</div>
+                    </div>
+                </div>
+
+                <div class="projects-item">
+                    <div class="cap-project"><img src="./img/bg-project-emBreve.jpg" /></div>
+                    <div class="title-project"><p>Em breve</p></div>
+                    <div class="desc-project"><p>Em breve...</p></div>
+                    <div class="skills-project">
+                        <!-- <div class="skills-project-item">.Net</div> -->
+                    </div>
+                </div>
+
+            </div>
+            <div class="dots-projects">
+                <div class="dot-item active"></div>
+                <div class="dot-item"></div>
+                <div class="dot-item"></div>
+                <div class="dot-item"></div>
+                <div class="dot-item"></div>
+                <div class="dot-item"></div>
+            </div>
+         </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section id="" class="education-certification">
+        <div class="education-certification-center mt-5">
+
+            <div class="ct-edu-cet-right">
+                <i id="icon_formacao" class="bi bi-mortarboard-fill iconHatGrad"></i>
+            </div>
+
+            <div class="ct-edu-cet-left">
+
+                <div class="ct-formation mb-5">
+                    <h1 class="mb-1" id="h1_formacao">Formação</h1>
+                    <div class="ct-formation-center">
+                        <div>
+                            <div class="edCt-txt-title">Unicid - Universidade de São Paulo</div>
+                            <div class="edCt-txt">Ciência da computação</div>
+                            <div class="edCt-txt">Bacharelado 8 semestres</div>
+                            <div class="edCt-txt">Graduação completa</div>
+                            <div class="edCt-txt">2020 - 2023</div>
                         </div>
-                        <div class="ct-itens-academics">
-                            <h1 class="title-experience">Habilidades</h1> 
-                            <div class="academics-education">
-                                <img src="./img/nivelskills.png" />                      
+                    </div>
+                </div>
+
+                <div class="ct-certification-list">
+                    <div class="ct-certification">
+                        <h1 class="mb-1" id="h1_cetificacao">Certificações</h1>
+                        <div class="ct-certification-center">
+
+                            <div id="inf-aws">
+                                <div class="edCt-txt-title">AWS - Amazon Web Services</div>
+                                <div class="edCt-txt">Cloud Computing Certification</div>
+                                <div class="edCt-txt">Udemy Academy</div>
+                                <div class="edCt-txt">Formação profissional</div>
+                                <div class="edCt-txt">2025</div>
                             </div>
+
+                            <div id="inf-tdd">
+                                <div class="edCt-txt-title">TDD em C# com xUnit e Moq</div>
+                                <div class="edCt-txt">Unitary and Integrative Tests</div>
+                                <div class="edCt-txt">Udemy Academy</div>
+                                <div class="edCt-txt">Formação profissional</div>
+                                <div class="edCt-txt">2025</div>
+                            </div>
+                        
+                            <div id="inf-ai">
+                                <div class="edCt-txt-title">Intro to Machine Learning</div>
+                                <div class="edCt-txt">AI & Machine Learning</div>
+                                <div class="edCt-txt">Kaggle courses</div>
+                                <div class="edCt-txt">Formação profissional</div>
+                                <div class="edCt-txt">2023</div>
+                            </div>
+
+                            <div class="ct-dots-ball">
+                                <div id="aws" class="dot-ball-course active" onclick="updateCoursed('aws');"></div> <!-- AWS -->
+                                <div id="tdd" class="dot-ball-course" onclick="updateCoursed('tdd');"></div> <!-- TDD & Mock -->
+                                <div id="ai" class="dot-ball-course" onclick="updateCoursed('ai');"></div> <!-- IA -->
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
 
-    <!-- CONTATO -->
-    <main>
-        <div class="container">
-            <div class="contact">
-                <div class="ct-contact">
-                    <h1 class="title-contact">Contato</h1>
-                    <div class="itens-contact">
-                        <a href="https://www.linkedin.com/in/leandro-sampaio-66248b230/" target="_blank" class="form-contact">
-                            <i class="bi bi-linkedin"></i>                        
-                        </a>
-                        <a href="https://github.com/LeandroSampaio7" target="_blank" class="form-contact">
-                            <i class="bi bi-github"></i>     
-                        </a>
-                        <a href="https://www.instagram.com/leandr.ow/" target="_blank" class="form-contact">
-                            <i class="bi bi-instagram"></i>                       
-                        </a>
-                        <a href="https://wa.me/5511985570037" target="_blank" class="form-contact">
-                            <i class="bi bi-whatsapp"></i>                                             
-                        </a>                      
-                    </div>
+    </section>
+
+    <!-- CONTACT -->
+     <section id="red_contatos" class="contact">
+        <div class="contact-center">
+            <h1>Contatos</h1>
+
+            <div class="contact-networks">
+
+                <div class="contact-networks-pack">
+
+                    <a href="https://www.linkedin.com/in/leandro-sampaio-66248b230" target="_blank" class="contact-networks-item">
+                        <div>
+                            <i class="bi bi-linkedin"></i>
+                            <div class="txt-contact-network">LinkedIn</div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/LeandroSampaio7" target="_blank" class="contact-networks-item">
+                        <div>
+                            <i class="bi bi-github"></i>
+                            <div class="txt-contact-network">GitHub</div>
+                        </div>
+                    </a>
                 </div>
+
+                <div class="contact-networks-pack">
+                    <a href="https://wa.me/5511985570037" target="_blank" class="contact-networks-item">
+                        <div>
+                            <i class="bi bi-whatsapp"></i></i>
+                            <div class="txt-contact-network">WhatsApp</div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.instagram.com/leandr.ow" target="_blank" class="contact-networks-item">
+                        <div>
+                            <i class="bi bi-instagram"></i></i>
+                            <div class="txt-contact-network">Instagram</div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
+
         </div>
-    </main>
-
-    <!-- BAIXAR CURRICULO -->
-    <main>
-        <div class="container">
-            <div class="dowload">
-                <button>
-                    <a href="./img/leandro_s_sampaio.pdf" target="_blank">
-                        <i class="bi bi-person-down">&nbsp;</i>
-                        <label>Baixar curriculo</label>
-                     </a>
-                </button>
-            </div>
-        </div>
-    </main>
-
-    <footer>
-        <div class="ct-footer">
-            <label id="txt_footer">Copyright © 2024 – Todos os Direitos Reservados.</label>
-        </div>
-    </footer>
+     </section> 
 
 
+    <section>
+        <div></div>
+    </section>
+
+     <!-- FOOTER -->
+    <footer class="footer">
+        <div>Copyright © 2024 – Todos os Direitos Reservados.</div>
+    </section>
+
+
+    
+
+
+
+    <div id="screenSize" class="screen-size-badge" aria-live="polite" aria-atomic="true">
+        Carregando tamanho…
+    </div>
 
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
