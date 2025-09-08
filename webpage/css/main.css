@@ -2369,7 +2369,7 @@ body {
 
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1320px) {
+@media screen and (min-width: 1200px) and (max-width: 1325px) {
 
     .my-photo-bg img {
         height: 525px;
@@ -2457,3 +2457,4 @@ pointer-events: none; /* não interfere com cliques na página */
     }
 
 }
+
