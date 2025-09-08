@@ -1,5 +1,5 @@
 ## Portfólio Pessoal
-![image](https://github.com/user-attachments/assets/5d364e22-92e0-407a-a509-a85ead911b99)
+
 
 Este é o repositório do meu portfólio pessoal, onde apresento um pouco mais sobre mim, minhas habilidades, experiências e os projetos que desenvolvi ao longo da minha carreira como desenvolvedor.
 
@@ -43,9 +43,7 @@ Aqui estão alguns dos projetos destacados no meu portfólio:
    Trata-se de um aplicativo web cuja principal funcionalidade é exibir produtos em um menu digital.
 
 ## Visualização
-![image](https://github.com/user-attachments/assets/86741be7-05f8-4363-90a4-8b5e0537689d)
-![image](https://github.com/user-attachments/assets/0c33ba3f-1e70-4596-8992-67f48938a0f8)
-![image](https://github.com/user-attachments/assets/0e1f23e2-25d4-4a8b-b06b-d097d6cf7af0)
+
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 Licença
